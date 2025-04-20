@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Clínica Horizonte Saúde - Cuidado Completo</title>
+    
+    <style>
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fonte diferente */
+            line-height: 1.7; 
+            margin: 0; 
+            padding: 0; 
+            color: #444; /* Cinza escuro para texto */
+            background-color: #f9f9f9; /* Fundo levemente cinza */
+        }
+        header { 
+            background-color: #1a7f5a; /* Verde escuro */
+            color: white;
+            padding: 1.5rem 0; 
+            text-align: center; 
+            border-bottom: 5px solid #12593f; /* Verde mais escuro */
+        }
+        main { 
+            padding: 25px; 
+            max-width: 1100px; /* Largura um pouco maior */
+            margin: 30px auto; 
+            background-color: #ffffff; /* Fundo branco para conteúdo principal */
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05); /* Sombra suave */
+            border-radius: 8px;
+        }
+        section { 
+            margin-bottom: 40px; 
+            padding-bottom: 25px; 
+            border-bottom: 1px solid #e0e0e0; /* Borda mais suave */
+        }
+        /* Remove a última borda */
+        section:last-of-type {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 10px;
+        }
+
+        h1, h2 { 
+            color: #1a7f5a; /* Verde escuro */
+            font-weight: 600;
+        }
+        h1 { font-size: 2.5em; margin-bottom: 0.2em; }
+        header p { font-size: 1.1em; color: #e0f2e9; margin-top: 0;} /* Texto do subtítulo do header */
+        
+        h2 { 
+            margin-bottom: 20px; 
+            padding-bottom: 8px; 
+            border-bottom: 3px solid #28a745; /* Verde mais claro */
+            font-size: 1.8em;
+        }
+        h3 { 
+            color: #333; /* Cor mais neutra para nomes */
+            margin-bottom: 5px; 
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+        img { 
+            max-width: 100%; 
+            height: auto; 
+            display: block; 
+            margin-bottom: 15px; 
+            border-radius: 6px; 
+            box-shadow: 0 1px 4px rgba(0,0,0,0.1); /* Sombra leve nas imagens */
+        }
+
+        /* Configuração de Layout Flexível para Serviços e Equipe */
+        .servicos-container, .equipe-container {
+            display: flex;
+            flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
+            gap: 25px; /* Espaço entre os itens */
+            justify-content: space-between; /* Tenta espaçar igualmente */
+        }
+        .servico-item, .equipe-membro {
+            flex: 1 1 300px; /* Base flexível, permite crescer e encolher, com base de 300px */
+            background-color: #fdfdfd;
+            padding: 15px;
+            border: 1px solid #eee;
+            border-radius: 5px;
+            box-sizing: border-box; /* Inclui padding e border na largura/altura */
+            text-align: center; /* Centraliza texto nos cards da equipe */
+        }
+        .servico-item {
+            text-align: left; /* Mantém texto dos serviços alinhado à esquerda */
+        }
+        .equipe-membro img { 
+            max-width: 120px; /* Imagens da equipe menores */ 
+            border-radius: 50%; /* Imagens redondas */
+            margin-left: auto;
+            margin-right: auto;
+            border: 3px solid #e0f2e9; /* Borda verde clara */
+        }
+        .equipe-membro p {
+            font-size: 0.95em;
+            color: #555;
+        }
+
+        /* Estilos do Formulário */
+        form label { 
+            display: block; 
+            margin-bottom: 6px; 
+            font-weight: bold; 
+            color: #333;
+        }
+        form input[type="text"], form input[type="email"] {
+            width: calc(100% - 24px); /* Ajuste para padding/border */
+            padding: 12px;
+            margin-bottom: 18px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+        form button {
+            background-color: #1a7f5a; /* Verde escuro */
+            color: white;
+            padding: 14px 25px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.1em;
+            transition: background-color 0.3s ease;
+        }
+        form button:hover { 
+            background-color: #12593f; /* Verde mais escuro no hover */
+        }
+        
+        footer { 
+            text-align: center; 
+            margin-top: 40px; 
+            padding: 20px; 
+            background-color: #e9ecef; /* Cinza claro para footer */
+            font-size: 0.9em; 
+            color: #555; 
+            border-top: 1px solid #dee2e6; 
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Clínica Horizonte Saúde</h1>
+        <p>Seu bem-estar é o nosso horizonte.</p>
+    </header>
+
+    <main>
+        <section id="servicos">
+            <h2>Nossos Principais Serviços</h2>
+            <div class="servicos-container">
+                <div class="servico-item">
+                    <img src="https://via.placeholder.com/400x250/28a745/ffffff?text=Atendimento+Cl%C3%ADnico" alt="Ilustração de consulta médica">
+                    <h3>Atendimento Clínico Geral e Especialidades</h3>
+                    <p>Consultas agendadas com foco no cuidado integral do paciente, abrangendo clínica geral e diversas áreas de especialidade médica.</p>
+                </div>
+
+                <div class="servico-item">
+                    <img src="https://via.placeholder.com/400x250/17a2b8/ffffff?text=Diagn%C3%B3stico+por+Imagem" alt="Ilustração de exame de ultrassom">
+                     <h3>Diagnóstico por Imagem</h3>
+                    <p>Tecnologia avançada para exames de imagem, como ultrassonografia e radiologia digital, garantindo diagnósticos precisos e rápidos.</p>
+                </div>
+                
+                <div class="servico-item">
+                    <img src="https://via.placeholder.com/400x250/ffc107/000000?text=Aconselhamento+Nutricional" alt="Ilustração de alimentos saudáveis e plano nutricional">
+                     <h3>Aconselhamento Nutricional</h3>
+                    <p>Planos alimentares personalizados e orientação nutricional para promoção da saúde, controle de peso e tratamento de condições específicas.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="equipe">
+            <h2>Conheça Nossa Equipe</h2>
+            <div class="equipe-container">
+                <div class="equipe-membro">
+                    <img src="https://via.placeholder.com/150/6f42c1/ffffff?text=Dr.+Ricardo" alt="Foto do Dr. Ricardo Alves">
+                     <h3>Dr. Ricardo Alves</h3>
+                    <p>Cardiologista - CRM 54321/SC</p>
+                </div>
+
+                <div class="equipe-membro">
+                    <img src="https://via.placeholder.com/150/fd7e14/ffffff?text=Psic.+Juliana" alt="Foto da Psic. Juliana Costa">
+                     <h3>Psic. Juliana Costa</h3>
+                    <p>Psicóloga Clínica - CRP 11223/PR</p>
+                </div>
+
+                <div class="equipe-membro">
+                    <img src="https://via.placeholder.com/150/20c997/ffffff?text=Fisio.+Lucas" alt="Foto do Fisio. Lucas Pereira">
+                     <h3>Fisio. Lucas Pereira</h3>
+                    <p>Fisioterapeuta - CREFITO 33445/BA</p>
+                </div>
+                 <div class="equipe-membro">
+                    <img src="https://via.placeholder.com/150/e83e8c/ffffff?text=Recepc.+Sandra" alt="Foto da Recepc. Sandra Lima">
+                     <h3>Sandra Lima</h3>
+                    <p>Coordenação de Atendimento</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contato">
+             <h2>Fale Conosco</h2>
+            <p>Tem alguma dúvida ou deseja mais informações? Preencha o formulário:</p>
+
+            <form action="#" method="post"> 
+                <div>
+                    <label for="nome">Seu Nome:</label>
+                    <input type="text" id="nome" name="nome_completo" required placeholder="Digite seu nome completo">
+                </div>
+                <div>
+                    <label for="email">Seu E-mail:</label>
+                    <input type="email" id="email" name="email_contato" required placeholder="exemplo@dominio.com">
+                </div>
+                 <div>
+                    <label for="cidade">Sua Cidade:</label>
+                    <input type="text" id="cidade" name="cidade_contato" required placeholder="Cidade onde reside">
+                </div>
+                 <div>
+                    <label for="estado">Seu Estado:</label>
+                    <input type="text" id="estado" name="estado_contato" required placeholder="UF">
+                </div>
+                <div>
+                    <button type="submit">Enviar Mensagem</button>
+                </div>
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Clínica Horizonte Saúde. Desenvolvido como demonstração.</p>
+        <p>Av. Saúde Fictícia, 123 - Centro - Cidade Exemplo/BR</p>
+    </footer>
+
+</body>
+</html>
